@@ -1,0 +1,9 @@
+game\PolicyHandler.class
+game\EmailApplication.class
+game\EmailRepository.class
+game\AbstractEvent.class
+game\AbstractEvent$1.class
+game\EmailController.class
+game\Used.class
+game\config\kafka\KafkaProcessor.class
+game\Email.class
