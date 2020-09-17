@@ -104,13 +104,9 @@ phases:
                   periodSeconds: 5
                   failureThreshold: 10
                 livenessProbe:
-                  #httpGet:
-                    #path: /actuator/health
-                    #port: 8080
-                  exec:
-                    command:
-                    - cat
-                    - /mnt/aws/healthy
+                  httpGet:
+                    path: /actuator/health
+                    port: 8080
                   initialDelaySeconds: 150
                   timeoutSeconds: 2
                   periodSeconds: 5
