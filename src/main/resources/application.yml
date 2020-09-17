@@ -4,11 +4,19 @@ server:
 
 spring:
   profiles: default
+  datasource:
+    url: jdbc:mariadb://admin06-mariadb-02.cuy0kl2qzoel.ap-northeast-2.rds.amazonaws.com:3306/admin06_mariadb?useUnicode=yes&characterEncoding=UTF-8
+    driver-class-name: org.mariadb.jdbc.Driver
+    username: admin
+    password: skccadmin
   jpa:
+    generate-ddl: true
+    database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
     properties:
       hibernate:
         show_sql: true
         format_sql: true
+        ddl-auto : create
   cloud:
     stream:
       kafka:
@@ -41,6 +49,19 @@ server:
 
 spring:
   profiles: docker
+  datasource:
+    url: jdbc:mariadb://${DB_URL}/admin06_mariadb?useUnicode=yes&characterEncoding=UTF-8
+    driver-class-name: org.mariadb.jdbc.Driver
+    username: ${DB_USER}
+    password: ${DB_PASSWORD}
+  jpa:
+    generate-ddl: true
+    database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
+    properties:
+      hibernate:
+        show_sql: true
+        format_sql: true
+        ddl-auto : create
   cloud:
     stream:
       kafka:

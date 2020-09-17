@@ -9,9 +9,9 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>game</groupId>
-	<artifactId>email</artifactId>
+	<artifactId>telegram</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>email</name>
+	<name>telegram</name>
 	<description>Demo project for Spring Boot</description>
 
 	<properties>
@@ -31,9 +31,8 @@
 		</dependency>
 
 		<dependency>
-			<groupId>com.h2database</groupId>
-			<artifactId>h2</artifactId>
-			<scope>runtime</scope>
+			<groupId>org.mariadb.jdbc</groupId>
+			<artifactId>mariadb-java-client</artifactId>
 		</dependency>
 
 		<dependency>
