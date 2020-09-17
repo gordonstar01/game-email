@@ -110,7 +110,7 @@ phases:
                   exec:
                     command:
                     - cat
-                    - /mnt/aws/healthy-test
+                    - /mnt/aws/healthy
                   initialDelaySeconds: 150
                   timeoutSeconds: 2
                   periodSeconds: 5
